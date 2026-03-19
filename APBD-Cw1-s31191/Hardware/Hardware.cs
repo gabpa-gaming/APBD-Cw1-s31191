@@ -3,10 +3,16 @@ namespace APBD_Cw1_s31191;
 public abstract class Hardware
 {
     public int Id { get; private set; }
+    public AvailabilityStatus AvailabilityStatus { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    
     private static int _idCount;
-
-    protected Hardware()
+    protected Hardware(string name, string description, AvailabilityStatus availabilityStatus)
     {
-       Id = _idCount++;
+        Name = name;
+        Description = description; 
+        AvailabilityStatus = availabilityStatus;
+        Id = _idCount++;
     }
 }
