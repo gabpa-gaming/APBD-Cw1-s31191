@@ -1,5 +1,11 @@
 namespace APBD_Cw1_s31191;
 
+public enum AvailabilityStatus
+{
+    Available,
+    Leased,
+    Unavailable
+}
 public abstract class Hardware
 {
     public int Id { get; private set; }
