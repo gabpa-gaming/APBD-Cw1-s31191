@@ -19,7 +19,7 @@ public class HardwareService(HardwareRepository repository)
         return _repository.GetAllHardware();
     }
 
-    public List<Hardware> GetAllAvailbleHardware()
+    public List<Hardware> GetAllAvailableHardware()
     {
         return _repository.GetAllAvailbleHardware();
     }

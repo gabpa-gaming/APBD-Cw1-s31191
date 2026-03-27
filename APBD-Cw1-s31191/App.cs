@@ -154,7 +154,7 @@ public class App(
     private void ShowAvailableHardware()
     {
         Console.WriteLine("Sprzęt dostępny do wypożyczenia");
-        var available = hardwareService.GetAllAvailbleHardware();
+        var available = hardwareService.GetAllAvailableHardware();
         PrintHardwareList(available);
     }
 
