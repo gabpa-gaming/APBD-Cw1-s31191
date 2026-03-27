@@ -24,14 +24,12 @@ public class Lease()
     
     public decimal CalculateReturnCost(DateTime today)
     {
-        if (DueDate < today)
+        if (DueDate > today)
         {
             return BaseFee;
         }
-
         var timeLate = today - DueDate;
         var daysLate = timeLate.Days;
-        
         return BaseFee + daysLate * DailyPenaltyFee;
     }
     public static int ConvertIdsToJoinedLeaseId(int userId, int leasedItemId)

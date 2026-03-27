@@ -24,6 +24,16 @@ public class LeaseService(
     private UserService _userService = userService;
     private LeaseRepository _leaseRepository = leaseRepository;
 
+    public List<Lease> GetUserLeases(int userId)
+    {
+        return _leaseRepository.GetLeasesByUserId(userId);
+    }
+
+    public List<Lease> GetOverdueLeases(DateTime today)
+    {
+        return _leaseRepository.GetAllLeases().FindAll(lease => lease.DueDate < today);
+    }
+    
     public LeaseResult LeaseHardware(DateTime today, int itemId, int userId, DateTime dueDate,
         decimal baseFee, decimal dailyPenaltyFee)
     {
