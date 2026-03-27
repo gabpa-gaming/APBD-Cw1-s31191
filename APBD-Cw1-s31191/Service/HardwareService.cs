@@ -21,6 +21,6 @@ public class HardwareService(HardwareRepository repository)
 
     public List<Hardware> GetAllAvailableHardware()
     {
-        return _repository.GetAllAvailbleHardware();
+        return _repository.GetAllAvailableHardware();
     }
 }

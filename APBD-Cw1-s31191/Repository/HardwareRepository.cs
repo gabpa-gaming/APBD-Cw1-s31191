@@ -17,7 +17,7 @@ public class HardwareRepository : Repository<Hardware>
         return GetEntries();
     }
 
-    public List<Hardware> GetAllAvailbleHardware()
+    public List<Hardware> GetAllAvailableHardware()
     {
         return GetAllHardware().FindAll(hardware => hardware.AvailabilityStatus == AvailabilityStatus.Available);
     }
